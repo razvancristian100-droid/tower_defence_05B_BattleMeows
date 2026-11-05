@@ -1,0 +1,71 @@
+{
+  "harta": {
+    "dimensiune_ecran": [800, 600],
+    "puncte_traseu": [
+      [0, 100], [200, 100], [200, 400], [600, 400], [600, 200], [800, 200]
+    ],
+    "viata_baza_initiala": 100,
+    "monede_initiale": 50
+  },
+  "tipuri_inamici": [
+    {
+      "tip_id": "inamic_simplu",
+      "nume": "Inamic Simplu",
+      "viata_max": 30.0,
+      "viteza_baza": 50.0,
+      "recompensa": 10
+    },
+    {
+      "tip_id": "inamic_rapid",
+      "nume": "Inamic Rapid",
+      "viata_max": 20.0,
+      "viteza_baza": 100.0,
+      "recompensa": 15
+    }
+  ],
+  "tipuri_turnuri": [
+    {
+      "tip_id": "turn_clasic",
+      "tip_comportament": "direct",
+      "cost": 30,
+      "raza": 150.0,
+      "cooldown": 1.0,
+      "daune": 15.0,
+      "upgrade": {
+        "cost_upgrade": 40,
+        "bonus_daune": 10.0,
+        "bonus_raza": 20.0
+      }
+    },
+    {
+      "tip_id": "turn_gheata",
+      "tip_comportament": "incetinire",
+      "cost": 50,
+      "raza": 120.0,
+      "cooldown": 1.5,
+      "daune": 5.0,
+      "factor_incetinire": 0.4,
+      "durata_incetinire": 2.0,
+      "upgrade": {
+        "cost_upgrade": 60,
+        "bonus_daune": 5.0,
+        "bonus_raza": 15.0
+      }
+    }
+  ],
+  "valuri": [
+    {
+      "numar_val": 1,
+      "grupuri": [
+        {"tip_inamic": "inamic_simplu", "numar_inamici": 3, "interval_spawn": 1.5}
+      ]
+    },
+    {
+      "numar_val": 2,
+      "grupuri": [
+        {"tip_inamic": "inamic_simplu", "numar_inamici": 5, "interval_spawn": 1.2},
+        {"tip_inamic": "inamic_rapid", "numar_inamici": 2, "interval_spawn": 1.0}
+      ]
+    }
+  ]
+}
