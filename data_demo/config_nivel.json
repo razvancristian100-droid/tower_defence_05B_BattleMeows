@@ -1,34 +1,8 @@
 {
   "harta": {
-    "dimensiune_ecran": [
-      800,
-      600
-    ],
+    "dimensiune_ecran": [1024, 768],
     "puncte_traseu": [
-      [
-        0,
-        100
-      ],
-      [
-        200,
-        100
-      ],
-      [
-        200,
-        400
-      ],
-      [
-        600,
-        400
-      ],
-      [
-        600,
-        200
-      ],
-      [
-        800,
-        200
-      ]
+      [0, 250], [225, 250], [225, 675], [505, 675], [505, 425], [740, 425], [740, 255], [1024, 255]
     ],
     "viata_baza_initiala": 100,
     "monede_initiale": 50
@@ -83,26 +57,14 @@
     {
       "numar_val": 1,
       "grupuri": [
-        {
-          "tip_inamic": "inamic_simplu",
-          "numar_inamici": 3,
-          "interval_spawn": 1.5
-        }
+        {"tip_inamic": "inamic_simplu", "numar_inamici": 3, "interval_spawn": 1.5}
       ]
     },
     {
       "numar_val": 2,
       "grupuri": [
-        {
-          "tip_inamic": "inamic_simplu",
-          "numar_inamici": 5,
-          "interval_spawn": 1.2
-        },
-        {
-          "tip_inamic": "inamic_rapid",
-          "numar_inamici": 2,
-          "interval_spawn": 1.0
-        }
+        {"tip_inamic": "inamic_simplu", "numar_inamici": 5, "interval_spawn": 1.2},
+        {"tip_inamic": "inamic_rapid", "numar_inamici": 2, "interval_spawn": 1.0}
       ]
     }
   ]

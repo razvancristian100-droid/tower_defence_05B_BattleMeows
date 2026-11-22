@@ -1,8 +1,6 @@
 import json
 import os
 
-from pygame.examples import aacircle
-
 
 def incarca_configurare(cale_fisier="data_demo/config_nivel.json"):
 
@@ -11,7 +9,7 @@ def incarca_configurare(cale_fisier="data_demo/config_nivel.json"):
         return None
 
     try:
-        with open(cale_fisier, 'r', encoding='utf-8') as f:
+        with open(cale_fisier, "r", encoding="utf-8") as f:
             date = json.load(f)
         return date
     except json.JSONDecodeError:
@@ -19,8 +17,14 @@ def incarca_configurare(cale_fisier="data_demo/config_nivel.json"):
         return None
 
 
-def salveaza_rezultat(rezultat, val_atins, eliminari, monede, viata_baza, cale_fisier="output/rezultat_partida.json"):
-    #Salvează statisticile partidei la finalul jocului.
+def salveaza_rezultat(
+    rezultat,
+    val_atins,
+    eliminari,
+    monede,
+    viata_baza,
+    cale_fisier="output/rezultat_partida.json",
+):
 
     os.makedirs(os.path.dirname(cale_fisier), exist_ok=True)
 
@@ -29,9 +33,9 @@ def salveaza_rezultat(rezultat, val_atins, eliminari, monede, viata_baza, cale_f
         "val_atins": val_atins,
         "eliminari_totale": eliminari,
         "monede_cheltuite": monede,
-        "viata_baza_ramasa": viata_baza
+        "viata_baza_ramasa": viata_baza,
     }
 
-    with open(cale_fisier, 'w', encoding='utf-8') as f:
+    with open(cale_fisier, "w", encoding="utf-8") as f:
         json.dump(date_salvare, f, indent=4)
     print(f"Rezultatul a fost salvat în {cale_fisier}")
